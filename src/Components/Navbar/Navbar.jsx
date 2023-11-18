@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 
-// import search from '../Assets/search.png'
-// import profile from '../Assets/profile.png'
+
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 
@@ -24,8 +23,7 @@ function Navbar() {
         </ul>
         <div className="nav-login-cart">
             <Link to='/login'><button>Login</button></Link>
-            {/* <img src={search} alt="" />
-            <img src={profile} alt="" /> */}
+            
             <Link to='/cart'><img src={cart_icon} alt="" /></Link>
             <div className="nav-cart-count">
               0
