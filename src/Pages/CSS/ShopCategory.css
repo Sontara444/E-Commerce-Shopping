@@ -26,3 +26,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 80px;
 }
+
+.shopcategory-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
