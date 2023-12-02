@@ -11,4 +11,9 @@
 .productdisplay-img-list{
     display: flex;
     flex-direction: column;
+    gap: 16px;
+} 
+.productdisplay-main-img{
+    width: 586px;
+    height: 700px ;
 }
