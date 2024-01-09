@@ -1,19 +1,23 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
+import nav_dropdown from '../Assets/nav_dropdown.png'
 
 function Navbar() {
+
   const [menu, setMenu] = useState('shop')
+  const menuRef = useRef();
   return (
     <div className="navbar">
         <div className="nav-logo">
             <img src={logo} alt="" />
             <p>SHOPPER</p>
         </div>
-        <ul className='nav-menu'>
+        <img src={nav_dropdown} alt="" />
+        <ul ref={menuRef} className='nav-menu'>
             <li onClick={()=>{setMenu("shop")}}> <Link style={{textDecoration: 'none'}} to='/'>SHOP</Link>  {menu==='shop'? <hr/> : <></> }</li>
             <li onClick={()=>{setMenu("mens")}}><Link style={{textDecoration: 'none'}} to='/mens'>MEN</Link>   {menu==='mens'? <hr/> : <></> }</li>
             <li onClick={()=>{setMenu("womens")}}> <Link style={{textDecoration: 'none'}} to='/womens'>WOMEN</Link>  {menu==='womens'? <hr/> : <></> }</li>
